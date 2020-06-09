@@ -22,13 +22,18 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   margin: 0 auto;
-  grid-gap: 30px;
+  grid-gap: 32px;
 }
 
 .board div {
   background-color: blue;
-  border: 2px solid red;
+  border: 2px solid white;
   border-radius: 4%;
+}
+
+.board div img {
+  width: 99px;
+  height: 109px; 
 }
 
 .instructions {
