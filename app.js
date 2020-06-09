@@ -26,6 +26,7 @@
 //////////////////
 let numArray = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
 const card = document.querySelectorAll(".board div");
+let selection = [];
 
 
 for(let i = numArray.length - 1; i > 0; i--){
@@ -37,7 +38,29 @@ for(let i = numArray.length - 1; i > 0; i--){
 
 card.forEach(card => {
   card.innerHTML += numArray[0];
-});
+  card.addEventListener("click", () => {
+    selection.push(card.innerHTML);
+    if (selection.length !== 1) {
+     return;
+    } else {
+      checkformatch();
+    }
+  });
+
+checkformatch = (selection) => {
+  if (selection[0] !== selection[1]) {
+    return
+  } else {
+    matched();
+  }
+}
+
+matched = (card) => {
+  card.removeEventListener;
+}
+
+
+
 
 
 
