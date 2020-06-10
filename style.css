@@ -29,6 +29,9 @@ h1 {
   background-color: blue;
   border: 2px solid white;
   border-radius: 4%;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .board div img {
@@ -40,4 +43,28 @@ h1 {
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+.moon {
+  background-image:url(./assets/moon.jpg);
+}
+
+.star {
+  background-image: url(./assets/stars.jpg);
+}
+
+.tree {
+  background-image: url(./assets/tree.jpg);
+}
+
+.mountain {
+  background-image: url(./assets/mountain.jpg);
+}
+
+.rainbow {
+  background-image: url(./assets/rainbow.jpg);
+}
+
+.cloud {
+  background-image: url(./assets/cloud.jpg);
 }

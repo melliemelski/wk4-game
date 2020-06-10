@@ -24,11 +24,12 @@
 // });
 
 //////////////////
-let numArray = ["1", "1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6"];
+let numArray = ["moon", "moon", "tree", "tree", "rainbow", "rainbow", "cloud", "cloud", "mountain", "mountain", "star", "star"];
 const card = document.querySelectorAll(".board div");
 let selection = [];
+let clicks = 0;
 
-
+//shuffles numArray//
 for(let i = numArray.length - 1; i > 0; i--){
     const j = Math.floor(Math.random() * i)
     const temp = numArray[i]
@@ -36,34 +37,37 @@ for(let i = numArray.length - 1; i > 0; i--){
     numArray[j] = temp
   }
 
+card.forEach((div) => {
+  let shiftedNum = numArray.shift();
+  div.classList = shiftedNum;
+})
+
 card.forEach(card => {
-  card.innerHTML += numArray[0];
   card.addEventListener("click", () => {
-    selection.push(card.innerHTML);
-    if (selection.length !== 1) {
-     return;
-    } else {
-      checkformatch();
+    selection.push(card.classList);
+    clicks++;
+        console.log(selection);
+        console.log(clicks)
+    if (clicks === 2) {
+      if (selection[0] === selection[1]) {
+        console.log("match")
+        card.removeEventListener("click");
+        selection = [];
+      } else {
+        return
+      }
     }
-  });
+  })
+});
 
-checkformatch = (selection) => {
-  if (selection[0] !== selection[1]) {
-    return
-  } else {
-    matched();
-  }
-}
-
-matched = (card) => {
-  card.removeEventListener;
-}
-
-
-
-
-
-
-
+    // checkformatch = (selection) => {
+    //   if (selection[0] === selection[1]) {
+    //     console.log("match")
+    //     card.removeEventListener("click");
+    //     selection = [];
+    //   } else {
+    //     return
+    //   }
+    // };
 
 
