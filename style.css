@@ -7,12 +7,28 @@
 body {
   background-color: black;
 }
+
 h1 {
   font-family: 'Play', sans-serif;
   font-size: 30px;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+h2 {
+  font-family: 'Play', sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.score p {
+  color: white;
+  text-align: center;
+  font-family: 'Play', sans-serif;
+  font-size: 25px;
 }
 
 .board {
@@ -45,16 +61,17 @@ h1 {
   padding: 10px;
 }
 
+
 .moon {
   background-image:url(./assets/moon.jpg);
 }
 
 .star {
-  background-image: url(./assets/stars.jpg);
+  background-image:url(./assets/stars.jpg);
 }
 
 .tree {
-  background-image: url(./assets/tree.jpg);
+  background-image:url(./assets/tree.jpg);
 }
 
 .mountain {
@@ -67,4 +84,12 @@ h1 {
 
 .cloud {
   background-image: url(./assets/cloud.jpg);
+}
+
+.hidden {
+  background-image: url(./assets/back.jpg)
+}
+
+.rehide {
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)
 }
