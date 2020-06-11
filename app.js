@@ -56,7 +56,7 @@ checkformatch = () => {
 };
 
 gameOver = () => {
-  if (score = (numArray.length / 2)) {
+  if (score === (numArray.length / 2)) {
     location.reload();
     score = 0;
     clicks = 0;

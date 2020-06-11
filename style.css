@@ -42,7 +42,6 @@ h2 {
 }
 
 .board div {
-  background-color: blue;
   border: 2px solid white;
   border-radius: 4%;
   background-size:cover;
