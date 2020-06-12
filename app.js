@@ -4,6 +4,7 @@ let selection = [];
 let clicks = 0;
 let score = 0;
 let scoreHTML = document.querySelector(".score p")
+let cardId = null;
 
 
 //shuffles numArray//
@@ -27,10 +28,14 @@ cards.forEach(card => {
   card.onclick = () => {
     card.classList.remove('hidden');
     setTimeout(() => card.classList.add('hidden'), 2000);
-    selection.push(card);
-    clicks++;
-    if (clicks === 2) {
-      checkformatch();
+      if (card.id !== cardId) {
+      selection.push(card);
+      cardId = card.id;
+      clicks++;
+      if (clicks === 2) {
+        checkformatch();
+        cardId = null;
+      }
     }
   }
 });
@@ -56,7 +61,8 @@ checkformatch = () => {
 };
 
 gameOver = () => {
-  if (score === (numArray.length / 2)) {
+  if (score === ((numArray.length)/2)) {
+    alert("Great memory!!");
     location.reload();
     score = 0;
     clicks = 0;
